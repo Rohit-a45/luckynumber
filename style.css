@@ -1,0 +1,230 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Segoe UI', sans-serif;
+
+    background:
+        radial-gradient(ellipse at 15% 20%, #29205e 0%, transparent 40%),
+        radial-gradient(ellipse at 85% 80%, #102f58 0%, transparent 40%),
+        linear-gradient(135deg, #080816, #11112b, #090d20);
+
+    color: white;
+    overflow-x: hidden;
+    padding: 25px;
+}
+
+.background-glow {
+    position: fixed;
+    width: 350px;
+    height: 350px;
+    background: #713cff;
+    filter: blur(150px);
+    opacity: 0.2;
+    top: 10%;
+    left: 30%;
+    z-index: -1;
+}
+.background-glow {
+    position: fixed;
+    width: 400px;
+    height: 400px;
+    background: #713cff;
+    filter: blur(170px);
+    opacity: 0.25;
+    top: 10%;
+    left: 30%;
+    z-index: -1;
+}
+
+.game-container {
+    background: rgba(22, 22, 48, 0.75);
+    backdrop-filter: blur(25px);
+
+    border: 1px solid rgba(167, 139, 250, 0.25);
+    border-radius: 25px;
+
+    box-shadow:
+        0 20px 70px rgba(0, 0, 0, 0.5),
+        0 0 35px rgba(113, 60, 255, 0.12);
+}
+.game-icon {
+    font-size: 45px;
+    margin-bottom: 15px;
+}
+
+.tagline {
+    color: #a78bfa;
+    font-size: 11px;
+    letter-spacing: 4px;
+    font-weight: bold;
+    margin-bottom: 12px;
+}
+
+h1 {
+    font-size: 32px;
+    margin-bottom: 15px;
+}
+
+h1 span {
+    background: linear-gradient(90deg, #a78bfa, #38bdf8);
+
+    background-clip: text;
+    -webkit-background-clip: text;
+
+    color: transparent;
+    -webkit-text-fill-color: transparent;
+}
+.subtitle {
+    color: #aaaabd;
+    font-size: 14px;
+    line-height: 1.6;
+    margin-bottom: 25px;
+}
+
+.number-box {
+    width: 95px;
+    height: 95px;
+    margin: 0 auto 25px;
+    border-radius: 22px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, #713cff, #2878ff);
+    box-shadow: 0 0 35px rgba(113,60,255,0.4);
+}
+
+.number-box span {
+    font-size: 45px;
+    font-weight: bold;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+form label {
+    text-align: left;
+    font-size: 11px;
+    color: #b9b6d2;
+    letter-spacing: 2px;
+    font-weight: bold;
+}
+
+input {
+    width: 100%;
+    padding: 16px;
+    border: 1px solid #383653;
+    border-radius: 12px;
+    background: #151528;
+    color: white;
+    font-size: 16px;
+    outline: none;
+    transition: 0.3s;
+}
+
+input:focus {
+    border-color: #9872ff;
+    box-shadow: 0 0 15px rgba(152,114,255,0.2);
+}
+
+button {
+    cursor: pointer;
+    border: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.guess-btn {
+    padding: 16px;
+    border-radius: 12px;
+    color: white;
+    font-size: 14px;
+    background: linear-gradient(90deg, #713cff, #2878ff);
+}
+
+.guess-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px #d60b1c59;
+}
+
+#message {
+    min-height: 25px;
+    margin: 22px 0;
+    font-size: 15px;
+    color: #c4b5fd;
+    font-weight: 600;
+}
+
+.stats {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 22px;
+}
+
+.stat-box {
+    flex: 1;
+    padding: 15px;
+    background: rgba(255,255,255,0.05);
+    border: 1px solid rgba(255,255,255,0.08);
+    border-radius: 14px;
+}
+
+.stat-box h2 {
+    font-size: 25px;
+    color: #a78bfa;
+    margin-bottom: 5px;
+}
+
+.stat-box p {
+    font-size: 10px;
+    letter-spacing: 1px;
+    color: #aaaabd;
+}
+
+.reset-btn {
+    width: 100%;
+    padding: 14px;
+    background: transparent;
+    border: 1px solid hsl(255, 91%, 45%);
+    border-radius: 12px;
+    color: rgb(235, 143, 143);
+    font-size: 13px;
+}
+
+.reset-btn:hover {
+    background: #7654d9;
+}
+
+footer {
+    margin-top: 25px;
+    font-size: 9px;
+    letter-spacing: 2px;
+    color: #77758f;
+}
+
+button:disabled,
+input:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+@media (max-width: 480px) {
+    .game-container {
+        padding: 28px 20px;
+    }
+
+    h1 {
+        font-size: 27px;
+    }
+}

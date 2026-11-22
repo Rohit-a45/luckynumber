@@ -1,0 +1,74 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guess The Number</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="background-glow"></div>
+
+    <main class="game-container">
+
+        <div class="game-icon">🎮</div>
+
+        <p class="tagline">NUMBER CHALLENGE</p>
+
+        <h1>Guess The <span>Number</span></h1>
+
+        <p class="subtitle">
+            I'm thinking of a number between 1 and 50.
+            Can you guess it?
+        </p>
+
+        <div class="number-box">
+            <span>?</span>
+        </div>
+
+        <form id="guessForm">
+            <label for="guessInput">ENTER YOUR GUESS</label>
+
+            <input
+                type="number"
+                id="guessInput"
+                placeholder="Enter number (1-50)"
+                min="1"
+                max="50"
+                required
+            >
+
+            <button type="submit" class="guess-btn">
+                CHECK NUMBER →
+            </button>
+        </form>
+
+        <p id="message">Let's see your luck! ✨</p>
+
+        <div class="stats">
+            <div class="stat-box">
+                <h2 id="attempts">0</h2>
+                <p>ATTEMPTS</p>
+            </div>
+
+            <div class="stat-box">
+                <h2>50</h2>
+                <p>MAX NUMBER</p>
+            </div>
+        </div>
+
+        <button id="resetBtn" class="reset-btn">
+            ↻ NEW GAME
+        </button>
+
+        <footer>
+            MADE WITH ❤️ USING JAVASCRIPT
+        </footer>
+
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
